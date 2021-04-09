@@ -1,0 +1,20 @@
+<section class="cards-container">
+  <section class="historico-card" *ngFor="let tarjeta of datosRecibidos">
+    <div class="portada">
+      <div class="img-container">
+        <img src="assets/img/fiscalia.png" alt="foto" />
+      </div>
+    </div>
+    <div class="contraportada">
+      <div class="contenido">
+        <div>siglas: {{ tarjeta.siglas }}</div>
+        <div>Id: {{ tarjeta.id_simplicita }}</div>
+        <div>institucion: {{ tarjeta.institucion }}</div>
+        <div>descripcion: {{ tarjeta.desc_exp }}</div>
+        <!-- <div>correo: {{ tarjeta.correo }}</div>  -->
+        <div>entidad: {{ tarjeta.entidad }}</div>
+        <div>plazo: {{ tarjeta.plazo }}</div>
+      </div>
+    </div>
+  </section>
+</section>

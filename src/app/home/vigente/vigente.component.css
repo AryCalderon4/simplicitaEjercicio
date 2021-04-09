@@ -1,0 +1,127 @@
+body {
+  background-color: #f5f5dc;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.vigente-card {
+  background: linear-gradient(
+    to bottom,
+    rgb(245, 245, 245),
+    rgba(49, 74, 145, 0.521)
+  );
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+
+  padding: 10px;
+  margin: 5px;
+  margin-left: 10%;
+  width: 70%;
+  border-radius: 30px;
+  margin-bottom: 25%;
+}
+
+.vigente-card > div {
+  width: 100%;
+}
+
+.img-container {
+  width: 90%;
+  height: 25%;
+}
+.img-container > img {
+  width: 90%;
+  position: center;
+}
+/*Importa la libreria de font Raleway*/
+@font-face {
+  font-family: "Raleway";
+  src: url("../../../assets/fonts/Raleway-Italic-VariableFont_wght.ttf")
+    format(truetype);
+}
+/* */
+
+.contenido {
+  text-align: justify;
+  font-family: "Raleway";
+}
+.contenido > div {
+  /* margin-bottom: 15px; */
+  margin: 15px;
+}
+
+.id {
+  color: darkblue;
+  margin-bottom: 15px;
+  margin: 15px;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+}
+
+/* .buttons-container > button {
+  margin-left: 15px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+ */
+
+/*PRUEBA DE BOTON */
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+/* a {
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  color: #000000;
+  text-transform: uppercase;
+} */
+
+/* elemento normal  */
+.btn {
+  /* === .buttons-container > button*/
+  text-decoration: none;
+  border: 1px solid rgb(146, 148, 248);
+  position: relative;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  margin-left: 15px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+/* Se ejecuta cuando el mouse esta sobre el elemento  */
+.btn:hover {
+  box-shadow: 1px 1px 25px 10px rgba(252, 0, 0, 0.4); /* Sombra*/
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(66, 255, 8, 0.4),
+    transparent
+  );
+  transition: all 650ms;
+}
+
+.btn:hover:before {
+  left: 100%;
+}

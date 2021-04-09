@@ -1,0 +1,29 @@
+<!-- <div class="container">
+  <a href="#" class="btn">Hover to Shine</a>
+</div> -->
+<section class="cards-container">
+  <section class="vigente-card" *ngFor="let tarjeta of datosRecibidos">
+    <div class="img-container">
+      <img src="assets/img/issste_logo.png" alt="foto" />
+
+      <hr />
+    </div>
+    <div class="contenido">
+      <!-- <div>correo: {{ tarjeta.correo }}</div>  -->
+
+      <div>Entidad: {{ tarjeta.entidad }}</div>
+      <div>Descripcion: {{ tarjeta.desc_exp }}</div>
+      <strong class="id">Id: {{ tarjeta.id_simplicita }}</strong>
+      <div>Siglas: {{ tarjeta.siglas }}</div>
+      <div>Institucion: {{ tarjeta.institucion }}</div>
+      <div class="buttons-container">
+        <a href="#" class="btn">
+          <!-- <mat-icon>visibility</mat-icon> -->
+          Ver
+        </a>
+        <a href="#" class="btn">Análisis</a>
+      </div>
+      <div>Plazo: {{ tarjeta.plazo }}</div>
+    </div>
+  </section>
+</section>

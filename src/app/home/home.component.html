@@ -1,0 +1,14 @@
+<mat-tab-group *ngIf="datosTarjetas; else loading">
+  <mat-tab label="Vigente">
+    <!-- cuando quiera llamar un componente que tiene una variable que recibe datos -->
+    <!-- se usa de esta manera cuando necesitas usar una variable de otro componente -->
+    <!-- Normalmente se usa para componentes hijos jalen la informacion -->
+    <!-- componente[variableRecibirHijo] ="VariableDatosPadre" -->
+    <app-vigente [datosRecibidos]="datosTarjetas"></app-vigente>
+  </mat-tab>
+  <mat-tab label="Historico">
+    <app-historico [datosRecibidos]="datosTarjetas"></app-historico>
+  </mat-tab>
+</mat-tab-group>
+
+<ng-template #loading> <strong>Cargando...</strong> </ng-template>

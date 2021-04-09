@@ -1,0 +1,31 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.historico-card {
+  background-color: rgb(20, 220, 203);
+  border: 1px solid rgb(183, 214, 132);
+  padding: 10px;
+  margin: 5px;
+  margin-left: 10%;
+  border-radius: 30px;
+  width: 70%;
+}
+
+.vigente-card > div {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+/* Experimento css*/
+/* .historico-card .portada {
+  background-color: brown;
+}
+
+.historico-card .contraportada {
+  background-color: darkblue;
+} */
