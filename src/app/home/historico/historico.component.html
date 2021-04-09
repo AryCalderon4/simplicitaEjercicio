@@ -4,16 +4,26 @@
       <div class="img-container">
         <img src="assets/img/fiscalia.png" alt="foto" />
       </div>
+      <h1>{{ tarjeta.tipo_cont }}</h1>
     </div>
-    <div class="contraportada">
-      <div class="contenido">
-        <div>siglas: {{ tarjeta.siglas }}</div>
-        <div>Id: {{ tarjeta.id_simplicita }}</div>
-        <div>institucion: {{ tarjeta.institucion }}</div>
-        <div>descripcion: {{ tarjeta.desc_exp }}</div>
-        <!-- <div>correo: {{ tarjeta.correo }}</div>  -->
-        <div>entidad: {{ tarjeta.entidad }}</div>
-        <div>plazo: {{ tarjeta.plazo }}</div>
+
+    <div class="contenido">
+      <strong class="id">Id: {{ tarjeta.id_simplicita }}</strong>
+      <div>institucion: {{ tarjeta.institucion }}</div>
+      <div>Tipo Contenido: {{ tarjeta.tipo_cont }}</div>
+      <!-- <div>correo: {{ tarjeta.correo }}</div>  -->
+      <div>plazo: {{ tarjeta.plazo }}</div>
+
+      <div class="buttons-container">
+        <a href="#" class="btn">
+          <!-- <mat-icon>visibility</mat-icon> -->
+          Ver
+        </a>
+        <a href="#" class="btn">Análisis</a>
+        <div>
+          <mat-icon>spellcheck</mat-icon>
+          {{ tarjeta.siglas }}
+        </div>
       </div>
     </div>
   </section>

@@ -1,31 +1,121 @@
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
+  background: #e7e6e1;
+  padding-top: 25px;
 }
 
 .historico-card {
-  background-color: rgb(20, 220, 203);
-  border: 1px solid rgb(183, 214, 132);
-  padding: 10px;
+  /* background: linear-gradient(to bottom, #ffffff, #f2a154); */
+  box-shadow: 0 5px 10px rgba(173, 168, 168, 0.33);
+  /* background: #f7f6e7;  */
   margin: 5px;
   margin-left: 10%;
-  border-radius: 30px;
   width: 70%;
+  border-radius: 15px;
+  margin-bottom: 25%;
+  background: linear-gradient(to bottom, #f2edd7, #a2b29f38);
 }
 
 .vigente-card > div {
   width: 100%;
 }
 
-img {
+.portada {
+  background-color: #333;
+  position: relative; /* ///////////INVESTIGAR///////////// */
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.portada > h1 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Raleway";
+}
+
+.img-container {
+  width: 90%;
+  height: 25%;
+}
+.img-container > img {
+  width: 250px;
+  position: center;
+}
+/*Importa la libreria de font Raleway*/
+@font-face {
+  font-family: "Raleway";
+  src: url("../../../assets/fonts/Raleway-Italic-VariableFont_wght.ttf")
+    format(truetype);
+}
+/* */
+
+.contenido {
+  text-align: justify;
+  font-family: "Raleway";
+  height: 70%;
+  width: 80%;
+}
+.contenido > div {
+  /* margin-bottom: 15px; */
+  margin: 15px;
+}
+
+.id {
+  color: #3a6351;
+  margin-bottom: 15px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+}
+
+/*BOTONES*/
+/* elemento normal  */
+.btn {
+  /* === .buttons-container > button*/
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: #9cafaf85;
+
+  margin-left: 15px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Se ejecuta cuando el mouse esta sobre el elemento  */
+.btn:hover {
+  /* box-shadow: 0px 2px 10px 0px #11698e; */
+  background-color: #f2edd7;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #e48257, transparent);
+  transition: all 650ms;
 }
 
-/* Experimento css*/
-/* .historico-card .portada {
-  background-color: brown;
+.btn:hover:before {
+  left: 100%;
 }
+/**/
 
-.historico-card .contraportada {
-  background-color: darkblue;
-} */
+mat-icon {
+  vertical-align: bottom;
+  color: #3a6351;
+}

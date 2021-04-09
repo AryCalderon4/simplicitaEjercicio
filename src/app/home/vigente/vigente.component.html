@@ -3,19 +3,18 @@
 </div> -->
 <section class="cards-container">
   <section class="vigente-card" *ngFor="let tarjeta of datosRecibidos">
-    <div class="img-container">
-      <img src="assets/img/issste_logo.png" alt="foto" />
-
-      <hr />
+    <div class="portada">
+      <div class="img-container">
+        <img src="assets/img/issste_logo.png" alt="foto" />
+      </div>
+      <h1>{{ tarjeta.siglas }}</h1>
     </div>
-    <div class="contenido">
-      <!-- <div>correo: {{ tarjeta.correo }}</div>  -->
 
-      <div>Entidad: {{ tarjeta.entidad }}</div>
-      <div>Descripcion: {{ tarjeta.desc_exp }}</div>
-      <strong class="id">Id: {{ tarjeta.id_simplicita }}</strong>
-      <div>Siglas: {{ tarjeta.siglas }}</div>
+    <div class="contenido">
       <div>Institucion: {{ tarjeta.institucion }}</div>
+      <div>Entidad: {{ tarjeta.entidad }}</div>
+      <div>Tipo Contenido: {{ tarjeta.tipo_cont }}</div>
+      <strong class="id">Id: {{ tarjeta.id_simplicita }}</strong>
       <div class="buttons-container">
         <a href="#" class="btn">
           <!-- <mat-icon>visibility</mat-icon> -->
@@ -23,7 +22,8 @@
         </a>
         <a href="#" class="btn">Análisis</a>
       </div>
-      <div>Plazo: {{ tarjeta.plazo }}</div>
+      <div> <mat-icon>schedule</mat-icon>
+        Plazo: {{ tarjeta.plazo }}</div>
     </div>
   </section>
 </section>
